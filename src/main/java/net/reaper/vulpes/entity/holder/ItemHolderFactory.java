@@ -41,6 +41,24 @@ public class ItemHolderFactory {
                                                                               @NotNull Vec start,
                                                                               @NotNull Vec end) {
         return new FloatingYHolder(instance, spawnPos, itemStack, start, end);
+    }
 
+    /**
+     * Creates an item holder with movement on the y-axis
+     * @param instance The instance for the entity
+     * @param spawnPos The spawn pos where the entity should be spawned
+     * @param itemStack The stack which is shown
+     * @param start The start vector for the movement
+     * @param end The stop vector for the movement
+     * @param interpolation The interpolation typ for the calculation
+     * @return the created instance to the {@link FloatingYHolder}
+     */
+    public static <T extends ItemHolderEntity> FloatingYHolder createYFloating(@NotNull Instance instance,
+                                                                               @NotNull Point spawnPos,
+                                                                               @NotNull AbstractItem itemStack,
+                                                                               @NotNull Vec start,
+                                                                               @NotNull Vec end,
+                                                                               @NotNull Vec.Interpolation interpolation) {
+        return new FloatingYHolder(instance, spawnPos, itemStack, start, end, interpolation);
     }
 }
