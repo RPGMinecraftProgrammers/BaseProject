@@ -91,9 +91,6 @@ public class FloatingYHolder extends ItemHolderEntity {
         } else if (this.getAliveTicks() == 10 + OFFSET_TICKS + INTERPOLATE_TICK) {
             setActive(true);
         } else if (this.getAliveTicks() > OFFSET_TICKS) {
-            if (this.getAliveTicks() == OFFSET_TICKS + INTERPOLATE_TICK) {
-                this.getEntityMeta().setHasGlowingEffect(true);
-            }
             applyPosition();
         }
     }
