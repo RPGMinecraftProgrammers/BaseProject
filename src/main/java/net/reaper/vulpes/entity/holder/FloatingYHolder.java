@@ -94,13 +94,13 @@ public class FloatingYHolder extends ItemHolderEntity {
             if (this.getAliveTicks() == OFFSET_TICKS + INTERPOLATE_TICK) {
                 this.getEntityMeta().setHasGlowingEffect(true);
             }
-            applyPosition(Vec.Interpolation.SMOOTH);
+            applyPosition();
         }
     }
 
-    private void applyPosition(@NotNull Vec.Interpolation interpolationTyp) {
+    private void applyPosition() {
         var point = start.interpolate(end,
-                (float)(this.getAliveTicks() - OFFSET_TICKS) / INTERPOLATE_TICK, interpolationTyp);
+                (float)(this.getAliveTicks() - OFFSET_TICKS) / INTERPOLATE_TICK, interpolationType);
         this.teleport(this.position.withCoord(point));
     }
  }
