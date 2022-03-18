@@ -7,6 +7,7 @@ import net.reaper.vulpes.items.AbstractItem;
 import org.jetbrains.annotations.NotNull;
 
 /**
+ * The factory allows the creation of different instances of the {@link ItemHolderEntity}.
  * @author theEvilReaper
  * @version 1.0.0
  * @since 1.0.0
