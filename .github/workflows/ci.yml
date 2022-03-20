@@ -13,4 +13,4 @@ jobs:
       - name: Execute
         shell: bash
         run: |
-          java -jar /app/datagenerator.jar --base-remote "{{ $GITHUB_SERVER_URL/$GITHUB_REPOSITORY }}.git" --base-ref $GITHUB_REF_NAME --dtd-remote "https://github.com/RPGMinecraftProgrammers/Vulpes-DTD.git" --dtd-ref $GITHUB_REF_NAME
+          java -jar /app/datagenerator.jar --base-remote "$GITHUB_SERVER_URL/$GITHUB_REPOSITORY.git" --base-ref $GITHUB_REF_NAME --dtd-remote "https://github.com/RPGMinecraftProgrammers/Vulpes-DTD.git" --dtd-ref $GITHUB_REF_NAME
