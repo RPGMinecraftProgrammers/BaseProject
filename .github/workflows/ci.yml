@@ -15,7 +15,11 @@ jobs:
         working-directory: /app
         run: |
           java -jar /app/datagenerator.jar --base-remote "$GITHUB_SERVER_URL/$GITHUB_REPOSITORY.git" --base-ref $GITHUB_REF_NAME --dtd-remote "https://github.com/RPGMinecraftProgrammers/Vulpes-DTD.git" --dtd-ref $GITHUB_REF_NAME
-      - name: Publish gradle
-        shell: bash
+      - uses: actions/setup-java@v2
+        with:
+          java-version: 17
+      - name: Setup Gradle
+        uses: gradle/gradle-build-action@v2
+      - name: Execute Gradle build
         working-directory: /app/out
-        run: chmod +x ./gradlew && ./gradlew publishMavenPublicationToMavenRepository
+        run: gradle publishMavenPublicationToMavenRepository
