@@ -31,7 +31,7 @@ public abstract class ItemHolderEntity extends Entity {
         super(EntityType.SNOWBALL);
         this.item = item;
         var meta = (SnowballMeta) this.getEntityMeta();
-        meta.setItem(this.item.getItem().get());
+        //meta.setItem(this.item.getItem().get());
         meta.setHasNoGravity(true);
         setInstance(instance, spawnPoint);
     }
