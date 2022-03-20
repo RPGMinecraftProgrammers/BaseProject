@@ -19,5 +19,5 @@ jobs:
         shell: bash
         working-directory: /app/out
         run: |
-          chmod +x gradlew
+          chmod +x ./gradlew
           ./gradlew publishMavenPublicationToMavenRepository
