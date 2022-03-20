@@ -18,6 +18,4 @@ jobs:
       - name: Publish gradle
         shell: bash
         working-directory: /app/out
-        run: |
-          chmod +x ./gradlew
-          ./gradlew publishMavenPublicationToMavenRepository
+        run: chmod +x ./gradlew && ./gradlew publishMavenPublicationToMavenRepository
