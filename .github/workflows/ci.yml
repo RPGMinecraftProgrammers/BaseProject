@@ -8,7 +8,7 @@ jobs:
       contents: read
       packages: write
     container:
-      image: ghcr.io/rpgminecraftprogrammers/datagenerator:${{ github.GITHUB_REF_NAME }}
+      image: ghcr.io/rpgminecraftprogrammers/datagenerator:${{ github.REF_NAME }}
     steps:
       - name: Execute
         shell: bash
