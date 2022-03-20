@@ -21,3 +21,5 @@ jobs:
           gradle-version: 7.3.3
       - run: gradle publishMavenPublicationToMavenRepository
         working-directory: /app/out
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
