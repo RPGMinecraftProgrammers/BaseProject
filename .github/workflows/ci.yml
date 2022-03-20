@@ -21,5 +21,7 @@ jobs:
           java-version: 17
       - name: Setup Gradle
         uses: gradle/gradle-build-action@v2
+        with:
+          gradle-version: 7.3.3
+      - run: gradle publishMavenPublicationToMavenRepository
         working-directory: /app/out
-        run: gradle publishMavenPublicationToMavenRepository
