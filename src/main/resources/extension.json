@@ -1,0 +1,5 @@
+{
+  "entrypoint": "net.repaer.vulpes.Vulpes",
+  "name": "Vulpes",
+  "version": "1.0.0-SNAPSHOT"
+}
