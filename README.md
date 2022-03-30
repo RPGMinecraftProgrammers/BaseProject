@@ -1,2 +1,3 @@
-# BaseProject
-Simple Project to hold base implementation
+# Vulpes | Base Project
+![Vulpes](.github/assets/vulpes.jpg)
+

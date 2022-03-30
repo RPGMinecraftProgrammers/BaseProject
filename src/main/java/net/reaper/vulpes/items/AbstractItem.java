@@ -1,6 +1,6 @@
 package net.reaper.vulpes.items;
 
-import de.icevizion.aves.item.IItem;
+//import de.icevizion.aves.item.IItem;
 import net.minestom.server.entity.Player;
 import org.jetbrains.annotations.NotNull;
 
@@ -16,14 +16,14 @@ public class AbstractItem {
 
     private final UUID id = UUID.randomUUID();
 
-    protected final IItem item;
+    // protected final IItem item;
     protected final ItemCategory itemCategory;
     protected final ItemRarity itemRarity;
 
     private ItemFunction itemFunction;
 
-    public AbstractItem(@NotNull IItem item, @NotNull ItemCategory itemCategory, @NotNull ItemRarity itemRarity) {
-        this.item = item;
+    public AbstractItem(/*@NotNull IItem item,*/ @NotNull ItemCategory itemCategory, @NotNull ItemRarity itemRarity) {
+        //this.item = item;
         this.itemCategory = itemCategory;
         this.itemRarity = itemRarity;
     }
@@ -50,9 +50,9 @@ public class AbstractItem {
         return Objects.hash(id);
     }
 
-    public IItem getItem() {
+    /*public IItem getItem() {
         return item;
-    }
+    }*/
 
     public ItemCategory getItemCategory() {
         return itemCategory;

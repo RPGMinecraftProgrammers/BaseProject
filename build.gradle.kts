@@ -2,21 +2,20 @@ plugins {
     java
 }
 
-group = "org.example"
+group = "dev.themeinerlp"
 version = "1.0-SNAPSHOT"
 
 repositories {
-    mavenLocal()
-    mavenCentral()
     maven("https://jitpack.io")
+    mavenCentral()
 }
 
 dependencies {
-    implementation("org.jetbrains:annotations:22.0.0")
-    implementation("com.github.Minestom:Minestom:502db8ec5c")
-    implementation("de.icevizion.lib:Aves:1.1.0-SNAPSHOT")
+    implementation("org.jetbrains:annotations:23.0.0")
+    implementation("com.github.Minestom:Minestom:-SNAPSHOT")
+    // implementation("de.icevizion.lib:Aves:1.1.0-SNAPSHOT")
 
-    testImplementation("org.junit.jupiter:junit-jupiter-api:5.6.0")
+    testImplementation("org.junit.jupiter:junit-jupiter-api:5.8.2")
     testRuntimeOnly("org.junit.jupiter:junit-jupiter-engine")
 }
 
