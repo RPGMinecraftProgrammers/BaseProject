@@ -5,6 +5,11 @@ plugins {
 group = "dev.themeinerlp"
 version = "1.0-SNAPSHOT"
 
+java {
+    sourceCompatibility = JavaVersion.VERSION_17
+    targetCompatibility = JavaVersion.VERSION_17;
+}
+
 repositories {
     maven("https://jitpack.io")
     mavenCentral()
@@ -21,4 +26,10 @@ dependencies {
 
 tasks.getByName<Test>("test") {
     useJUnitPlatform()
+}
+
+tasks {
+    compileJava {
+        options.encoding = "UTF-8"
+    }
 }
