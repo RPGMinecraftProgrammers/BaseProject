@@ -16,9 +16,6 @@ public interface CoinFunction {
      * @param player The player who is involved in the process
      * @param coins The amount of coins
      */
-    void updateCoins(@NotNull Player player, @NotNull UpdateReason updateReason, int coins);
+    void updateCoins(@NotNull Player player, int coins);
 
-    enum UpdateReason {
-        ADD, REMOVE;
-    }
 }
