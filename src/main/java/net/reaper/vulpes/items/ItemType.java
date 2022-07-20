@@ -8,5 +8,5 @@ package net.reaper.vulpes.items;
 public enum ItemType {
 
     ACTIVE,
-    PASSIV;
+    PASSIV
 }
