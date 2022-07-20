@@ -4,6 +4,7 @@ import net.minestom.server.coordinate.Point;
 import net.minestom.server.coordinate.Vec;
 import net.minestom.server.instance.Instance;
 import net.reaper.vulpes.items.AbstractItem;
+import org.jetbrains.annotations.Contract;
 import org.jetbrains.annotations.NotNull;
 
 /**
@@ -21,9 +22,10 @@ public class ItemHolderFactory {
      * @param itemStack The stack which is shown
      * @return the created instance to the {@link Holder}
      */
-    public static <T extends ItemHolderEntity> Holder createHolder(@NotNull Instance instance,
-                                                                   @NotNull Point spawnPos,
-                                                                   @NotNull AbstractItem itemStack) {
+    @Contract("_, _, _ -> new")
+    public static <T extends ItemHolderEntity> @NotNull Holder createHolder(@NotNull Instance instance,
+                                                                            @NotNull Point spawnPos,
+                                                                            @NotNull AbstractItem itemStack) {
         return new Holder(instance, spawnPos, itemStack);
     }
 
@@ -36,11 +38,12 @@ public class ItemHolderFactory {
      * @param end The stop vector for the movement
      * @return the created instance to the {@link FloatingYHolder}
      */
-    public static <T extends ItemHolderEntity> FloatingYHolder createYFloating(@NotNull Instance instance,
-                                                                              @NotNull Point spawnPos,
-                                                                              @NotNull AbstractItem itemStack,
-                                                                              @NotNull Vec start,
-                                                                              @NotNull Vec end) {
+    @Contract("_, _, _, _, _ -> new")
+    public static <T extends ItemHolderEntity> @NotNull FloatingYHolder createYFloating(@NotNull Instance instance,
+                                                                                        @NotNull Point spawnPos,
+                                                                                        @NotNull AbstractItem itemStack,
+                                                                                        @NotNull Vec start,
+                                                                                        @NotNull Vec end) {
         return new FloatingYHolder(instance, spawnPos, itemStack, start, end);
     }
 
@@ -54,12 +57,13 @@ public class ItemHolderFactory {
      * @param interpolation The interpolation typ for the calculation
      * @return the created instance to the {@link FloatingYHolder}
      */
-    public static <T extends ItemHolderEntity> FloatingYHolder createYFloating(@NotNull Instance instance,
-                                                                               @NotNull Point spawnPos,
-                                                                               @NotNull AbstractItem itemStack,
-                                                                               @NotNull Vec start,
-                                                                               @NotNull Vec end,
-                                                                               @NotNull Vec.Interpolation interpolation) {
+    @Contract("_, _, _, _, _, _ -> new")
+    public static <T extends ItemHolderEntity> @NotNull FloatingYHolder createYFloating(@NotNull Instance instance,
+                                                                                        @NotNull Point spawnPos,
+                                                                                        @NotNull AbstractItem itemStack,
+                                                                                        @NotNull Vec start,
+                                                                                        @NotNull Vec end,
+                                                                                        @NotNull Vec.Interpolation interpolation) {
         return new FloatingYHolder(instance, spawnPos, itemStack, start, end, interpolation);
     }
 }
