@@ -23,7 +23,6 @@ dependencies {
     api("com.github.WorldSeedGames:WorldSeedEntityEngine:v1.1.2")
 
     compileOnly("com.github.Minestom:Minestom:$minestomVersion")
-    // implementation("de.icevizion.lib:Aves:1.1.0-SNAPSHOT")
 
     testImplementation("com.github.Minestom:Minestom:$minestomVersion")
     testImplementation("org.junit.jupiter:junit-jupiter-api:5.8.2")
