@@ -16,5 +16,5 @@ public interface ItemFunction {
      *
      * @param player The player who receives the item
      */
-    void apply(@NotNull Player player);
+    void apply(@NotNull Player player, @NotNull ItemData itemData);
 }
