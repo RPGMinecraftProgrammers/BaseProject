@@ -17,14 +17,14 @@ public class AbstractItem {
     private final UUID id = UUID.randomUUID();
 
     // protected final IItem item;
-    protected final ItemCategory itemCategory;
+    protected final ItemType itemType;
     protected final ItemRarity itemRarity;
 
     private ItemFunction itemFunction;
 
-    public AbstractItem(/*@NotNull IItem item,*/ @NotNull ItemCategory itemCategory, @NotNull ItemRarity itemRarity) {
+    public AbstractItem(/*@NotNull IItem item,*/ @NotNull ItemType itemType, @NotNull ItemRarity itemRarity) {
         //this.item = item;
-        this.itemCategory = itemCategory;
+        this.itemType = itemType;
         this.itemRarity = itemRarity;
     }
 
@@ -54,8 +54,8 @@ public class AbstractItem {
         return item;
     }*/
 
-    public ItemCategory getItemCategory() {
-        return itemCategory;
+    public ItemType getItemCategory() {
+        return itemType;
     }
 
     public ItemRarity getItemRarity() {
